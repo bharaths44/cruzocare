@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Kanopi Brazil';
+  src: url('/KanopiBrazil.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 210 85% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 100% 38%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cruzo-black text-white;
+    background-image: radial-gradient(circle at 50% 50%, #111111 0%, #000000 100%);
+  }
+}
+
+.road {
+  background-color: #444;
+  position: relative;
+  overflow: hidden;
+}
+
+.road::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 6px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(to right,
+      transparent,
+      transparent 20px,
+      white 20px,
+      white 40px);
+  animation: moveRoad 1s linear infinite;
+}
+
+@keyframes moveRoad {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 40px 0;
+  }
+}
+
+.card-glow {
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 25px rgba(52, 152, 219, 0.8);
+}
+
+.plan-title {
+  font-family: 'Kanopi Brazil', sans-serif;
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+  letter-spacing: 1px;
+}
+
+.plan-price {
+  font-family: 'Kanopi Brazil', sans-serif;
+}
