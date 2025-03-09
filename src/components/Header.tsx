@@ -2,8 +2,6 @@
 import React from 'react';
 import logo from '/public/logo.png';
 import { Button } from "@/components/ui/button";
-import { PhoneCall, Instagram } from "lucide-react";
-import WhatsAppIcon from './WhatsApp';
 
 const Header = () => {
   return (
