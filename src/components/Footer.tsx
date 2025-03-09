@@ -1,9 +1,14 @@
 
 import { Mail } from "lucide-react";
-import WhatsAppIcon from './WhatsApp';
-import InstagramIcon from './Instagram';
-import logo from '/public/logo.png';
+import WhatsAppIcon from './ui/WhatsApp';
+import InstagramIcon from './ui/Instagram';
+import logo from './../images/logo.png';
+import { scrollToSection } from "./animation/smooth";
 const Footer = () => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    scrollToSection(sectionId.replace('#', ''));
+  };
   return (
     <footer className="bg-black pt-12 pb-6">
       <div className="container mx-auto px-4">
@@ -18,16 +23,16 @@ const Footer = () => {
                 className="object-contain"
               />
             </div>
-            <p className="text-gray-400">Premium car care services in Kochi. Keeping your vehicle in perfect condition.</p>
+            <p className="text-gray-400"><br />Premium car care services in Kochi. Keeping your vehicle in perfect condition.</p>
           </div>
 
           <div>
             <h3 className="text-lg font-bold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-cruzo-blue transition-colors">Home</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-cruzo-blue transition-colors">Services</a></li>
-              <li><a href="#plans" className="text-gray-400 hover:text-cruzo-blue transition-colors">Plans</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-cruzo-blue transition-colors">Contact</a></li>
+              <li><a href="# " onClick={(e) => handleClick(e, '#')} className="text-gray-400 hover:text-cruzo-blue transition-colors">Home</a></li>
+              <li><a href="#services" onClick={(e) => handleClick(e, 'services')} className="text-gray-400 hover:text-cruzo-blue transition-colors">Services</a></li>
+              <li><a href="#plans" onClick={(e) => handleClick(e, 'plans')} className="text-gray-400 hover:text-cruzo-blue transition-colors">Plans</a></li>
+              <li><a href="#contact" onClick={(e) => handleClick(e, 'contact')} className="text-gray-400 hover:text-cruzo-blue transition-colors">Contact</a></li>
             </ul>
           </div>
 

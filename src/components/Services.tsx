@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { Car, Droplets, Battery, Wrench, Plane } from 'lucide-react';
+import { Car, Droplets, Battery, Wrench, Plane, CalendarCheck } from 'lucide-react';
 
-const ServiceCard = ({ icon, title, description }: { 
-  icon: React.ReactNode; 
-  title: string; 
-  description: string 
+const ServiceCard = ({ icon, title, description }: {
+  icon: React.ReactNode;
+  title: string;
+  description: string
 }) => {
   return (
     <div className="bg-white bg-opacity-5 rounded-xl p-6 hover:bg-opacity-10 transition-all duration-300 border border-white border-opacity-10">
@@ -36,15 +36,21 @@ const Services = () => {
       description: "Regular battery maintenance to prevent unexpected failures."
     },
     {
-      icon: <Wrench className="h-6 w-6 text-cruzo-blue" />,
+      icon: <CalendarCheck className="h-6 w-6 text-cruzo-blue" />,
       title: "Vehicle Service",
       description: "Comprehensive service coordination with authorized showrooms."
+    },
+    {
+      icon: <Wrench className="h-6 w-6 text-cruzo-blue" />,
+      title: "General Checkups",
+      description: "Ensure your vehicle stays in top condition."
     },
     {
       icon: <Plane className="h-6 w-6 text-cruzo-blue" />,
       title: "Airport Pickup",
       description: "Convenient pickup service from Cochin International Airport (COK)."
-    }
+    },
+
   ];
 
   return (
@@ -58,7 +64,7 @@ const Services = () => {
             We provide complete care for your vehicle with our premium services
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />
