@@ -81,7 +81,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'car-drive-1': 'car-drive 15s linear infinite',
-				'car-drive-2': 'car-drive-reverse 20s linear infinite 2s',
+				'car-drive-2': 'car-drive-reverse 20s linear infinite',
 				'car-drive-3': 'car-drive 18s linear infinite 5s',
 				'float': 'float 3s ease-in-out infinite'
 			}
