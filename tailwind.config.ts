@@ -1,6 +1,4 @@
 
-import type { Config } from "tailwindcss";
-
 export default {
 	darkMode: ["class"],
 	content: [
@@ -53,7 +51,7 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'cruzo': ['Orbitron', 'sans-serif'],
+				'cruzo': ['Kanopi Brazil', 'sans-serif'],
 				'sans': ['Inter', 'sans-serif'],
 				'kanopi': ['"Kanopi Brazil"', 'sans-serif'],
 			},
@@ -67,8 +65,12 @@ export default {
 					to: { height: '0' }
 				},
 				'car-drive': {
-					'0%': { transform: 'translateX(0)' },
-					'100%': { transform: 'translateX(calc(100vw - 50px))' }
+					'0%': { transform: 'translateX(-100px)' },
+					'100%': { transform: 'translateX(100vw)' }
+				},
+				'car-drive-reverse': {
+					'0%': { transform: 'translateX(100vw) rotateY(180deg)' },
+					'100%': { transform: 'translateX(-100px) rotateY(180deg)' }
 				},
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
@@ -79,11 +81,11 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'car-drive-1': 'car-drive 15s linear infinite',
-				'car-drive-2': 'car-drive 20s linear infinite 2s',
+				'car-drive-2': 'car-drive-reverse 20s linear infinite 2s',
 				'car-drive-3': 'car-drive 18s linear infinite 5s',
 				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+}

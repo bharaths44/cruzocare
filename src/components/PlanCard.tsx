@@ -23,24 +23,23 @@ const PlanCard: React.FC<PlanProps> = ({
   isPopular = false,
 }) => {
   return (
-    <div className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 flex flex-col card-glow ${
-      isPopular ? 'transform md:scale-110 border-2 border-cruzo-blue' : ''
-    }`}>
+    <div className={`relative bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 flex flex-col card-glow ${isPopular ? 'transform md:scale-110 border-2 border-cruzo-blue' : ''
+      }`}>
       {isPopular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-cruzo-blue text-white py-1 px-4 rounded-full text-sm font-bold">
-          MOST POPULAR
+          RECOMMENDED
         </div>
       )}
-      
+
       <h3 className="text-xl md:text-2xl font-bold plan-title mb-2">
         {title} PLAN
       </h3>
-      
+
       <div className="flex items-baseline mb-4">
         <span className="text-2xl md:text-4xl font-bold text-white plan-price">₹{price}</span>
         <span className="text-gray-400 ml-2">/{duration}</span>
       </div>
-      
+
       <div className="flex-grow">
         <ul className="space-y-3 mb-6">
           {features.map((feature, index) => (
@@ -51,12 +50,8 @@ const PlanCard: React.FC<PlanProps> = ({
           ))}
         </ul>
       </div>
-      
-      <Button className={`w-full ${
-        isPopular ? 'bg-cruzo-blue hover:bg-cruzo-darkBlue' : 'bg-white bg-opacity-20 hover:bg-opacity-30'
-      }`}>
-        Choose Plan
-      </Button>
+
+
     </div>
   );
 };

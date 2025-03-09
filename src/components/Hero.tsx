@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-[url('/lovable-uploads/566b58c8-280c-45b9-95e2-7066bbff9438.png')] bg-cover bg-center opacity-20"></div>
       </div>
-      
+
       <div className="container mx-auto z-10 text-center px-4">
         <h1 className="text-5xl md:text-7xl font-bold font-cruzo mb-6 text-white">
           <span className="text-cruzo-blue">CRUZO</span> IN KOCHI!!!
@@ -26,11 +26,20 @@ const Hero = () => {
           </Button>
         </div>
       </div>
-      
+
+
       <div className="absolute bottom-10 w-full">
         <div className="road h-16 mx-auto max-w-5xl rounded-full">
-          <div className="w-8 h-4 bg-cruzo-blue rounded absolute top-1/3 left-10 transform -translate-y-1/2 animate-car-drive-1"></div>
-          <div className="w-8 h-4 bg-cruzo-blue rounded absolute top-2/3 right-10 transform -translate-y-1/2 animate-car-drive-2"></div>
+          <img
+            src="/public/car.png"
+            alt="Moving car"
+            className="w-12  absolute bottom-2/3 left-10 transform -translate-y-1/2 animate-car-drive-1"
+          />
+          <img
+            src="/public/car.png"
+            alt="Moving car"
+            className=" w-12 absolute top-2/3 left-10 transform -translate-y-1/2 animate-car-drive-2"
+          />
         </div>
         <div className="flex justify-center mt-6">
           <a href="#plans" className="animate-bounce">
