@@ -11,14 +11,24 @@ const firebaseConfig = {
     measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
+// Validate config
+Object.entries(firebaseConfig).forEach(([key, value]) => {
+    if (!value) {
+        console.error(`Missing Firebase config value for: ${key}`);
+    }
+});
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 // Initialize Analytics and export it
 export const analytics = async () => {
-    if (await isSupported()) {
-        return getAnalytics(app);
+    try {
+        if (await isSupported()) {
+            return getAnalytics(app);
+        }
+    } catch (error) {
+        console.error('Firebase Analytics Error:', error);
     }
     return null;
 };
