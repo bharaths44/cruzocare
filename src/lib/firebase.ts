@@ -11,12 +11,6 @@ const firebaseConfig = {
     measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-// Validate config
-Object.entries(firebaseConfig).forEach(([key, value]) => {
-    if (!value) {
-        console.error(`Missing Firebase config value for: ${key}`);
-    }
-});
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
