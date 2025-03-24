@@ -39,11 +39,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold text-white mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-cruzo-blue transition-colors">Car Drives</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cruzo-blue transition-colors">Car Wash</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cruzo-blue transition-colors">Battery Checkup</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cruzo-blue transition-colors">Vehicle Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cruzo-blue transition-colors">Airport Pickup</a></li>
+              <li><a href="#services" onClick={(e) => handleClick(e, 'services')} className="text-gray-400 hover:text-cruzo-blue transition-colors">Car Drives</a></li>
+              <li><a href="#services" onClick={(e) => handleClick(e, 'services')} className="text-gray-400 hover:text-cruzo-blue transition-colors">Car Wash</a></li>
+              <li><a href="#services" onClick={(e) => handleClick(e, 'services')} className="text-gray-400 hover:text-cruzo-blue transition-colors">Battery Checkup</a></li>
+              <li><a href="#services" onClick={(e) => handleClick(e, 'services')} className="text-gray-400 hover:text-cruzo-blue transition-colors">Vehicle Service</a></li>
+              <li><a href="#services" onClick={(e) => handleClick(e, 'services')} className="text-gray-400 hover:text-cruzo-blue transition-colors">General Checkup</a></li>
+              <li><a href="#services" onClick={(e) => handleClick(e, 'services')} className="text-gray-400 hover:text-cruzo-blue transition-colors">Airport Pickup</a></li>
             </ul>
           </div>
 
@@ -93,8 +94,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 mb-4 md:mb-0">© 2025 CRUZO. All rights reserved.</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-500 hover:text-cruzo-blue transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-500 hover:text-cruzo-blue transition-colors">Terms of Service</a>
+              <a href="/privacy" className="text-gray-500 hover:text-cruzo-blue transition-colors">Privacy Policy</a>
+              <a href="/tnc" className="text-gray-500 hover:text-cruzo-blue transition-colors">Terms and Conditions</a>
             </div>
           </div>
         </div>

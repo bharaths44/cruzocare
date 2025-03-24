@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Instagram, Mail } from "lucide-react";
+import { MapPin, Instagram, Mail, Check } from "lucide-react";
 import WhatsAppIcon from "@/components/ui/WhatsApp";
 
 const Contact = () => {
@@ -83,17 +83,17 @@ const Contact = () => {
                 Experience premium car care services tailored just for you. Our expert team ensures your vehicle receives the best care possible.
               </p>
               <ul className="space-y-4 mb-8 text-white">
-                <li className="flex items-center">
-                  <span className="mr-2">✓</span> Professional Car Care
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-cruzo-white" />Professional Car Care
                 </li>
-                <li className="flex items-center">
-                  <span className="mr-2">✓</span> Expert Technicians
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-cruzo-white" />Expert Technicians
                 </li>
-                <li className="flex items-center">
-                  <span className="mr-2">✓</span> Premium Service
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-cruzo-white" />Premium Service
                 </li>
-                <li className="flex items-center">
-                  <span className="mr-2">✓</span> 24/7 Support
+                <li className="flex items-center gap-2">
+                  <Check className="h-4 w-4 text-cruzo-white" />24/7 Support
                 </li>
               </ul>
             </div>

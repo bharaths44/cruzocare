@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clipboard, Car, MessageSquare, Wrench } from 'lucide-react';
+import { Clipboard, Car, MessageSquare, Wrench, Check } from 'lucide-react';
 
 const ProcessStep = ({ icon, title, children }: {
     icon: React.ReactNode;
@@ -81,7 +81,7 @@ const Process = () => {
                             <ul className="space-y-2 text-gray-300">
                                 {step.features.map((feature, i) => (
                                     <li key={i} className="flex items-center gap-2">
-                                        <span className="text-cruzo-blue">✓</span>
+                                        <Check className="h-4 w-4 text-cruzo-blue" />
                                         {feature}
                                     </li>
                                 ))}

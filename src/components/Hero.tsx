@@ -11,25 +11,22 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen relative flex items-center justify-center py-10 pt-[80px]">
-      {/* Background Image - z-index adjusted */}
-      <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-[url('/lovable-uploads/566b58c8-280c-45b9-95e2-7066bbff9438.png')] bg-cover bg-center opacity-20"></div>
-      </div>
-
-      {/* Content Container - increased z-index to ensure it stays above header when zooming */}
-      <div className="container mx-auto z-20 flex flex-col items-center">
-        <h1 className="text-5xl md:text-7xl font-bold font-cruzo mb-6 text-white w-full">
-          <div className="flex items-center justify-center w-full mb-4">
-            <img
-              src={silhoutte}
-              alt="Luxury Car"
-              width={800}
-              height={400}
-              className="object-contain w-full max-h-[40vh]"
-            />
+    <section className="min-h-screen relative flex items-center justify-center"> {/* Reduced padding-top from 80px to 50px and overall padding */}
+      <div className="container mx-auto z-20 flex flex-col items-center mt-0">
+        <h1 className="text-3xl md:text-7xl font-bold font-cruzo text-white w-full">
+          <div className="flex items-center justify-center w-full mb-0 mt-0">
+            <video
+              autoPlay
+              muted
+              playsInline
+              poster={silhoutte}
+              className="object-contain w-full md:w-4/4 lg:w-4/4 max-h-[100vh]"
+            >
+              <source src="rise.mp4" type="video/mp4" />
+              <img src={silhoutte} alt="Luxury Car" />
+            </video>
           </div>
-          <div className="text-center">
+          <div className="text-center -mt-5">
             <span className="text-cruzo-blue">CRUZO</span> IN KOCHI!!!
           </div>
         </h1>
@@ -48,7 +45,7 @@ const Hero = () => {
         </div>
 
         <div className="w-full max-w-5xl relative">
-          {/* Road with improved visibility */}
+          {/*Road*/}
           <div className="road h-16 bg-black/50 backdrop-blur-sm rounded-full relative border-t border-gray-700">
             <img
               src={car}
