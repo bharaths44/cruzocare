@@ -19,7 +19,7 @@ const Hero = () => {
               autoPlay
               muted
               playsInline
-              poster={silhoutte}
+              // poster={silhoutte}
               className="object-contain w-full md:w-4/4 lg:w-4/4 max-h-[100vh]"
             >
               <source src="rise.mp4" type="video/mp4" />

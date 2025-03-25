@@ -9,7 +9,7 @@ const Terms = () => {
             </Helmet>
 
             <div className="mb-10 text-center">
-                <h1 className="text-3xl md:text-4xl font-bold mb-2 text-primary">CruzoCare Terms & Conditions</h1>
+                <h1 className="text-3xl md:text-4xl font-bold mb-2 text-primary">Cruzo Care Terms & Conditions</h1>
                 <div className="mt-4">
                     <p className="text-sm">Effective Date: January 1, 2025</p>
                     <p className="text-sm text-muted-foreground">(Governed by Laws of the Republic of India)</p>

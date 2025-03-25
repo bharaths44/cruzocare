@@ -8,12 +8,12 @@ const PrivacyPolicy = () => {
         <div className="min-h-screen bg-background py-20">
             <div className="container mx-auto px-4">
                 <Helmet>
-                    <title>Privacy Policy - CruzoCare</title>
-                    <meta name="description" content="Privacy policy of CruzoCare car services" />
+                    <title>Privacy Policy - Cruzo Care</title>
+                    <meta name="description" content="Privacy policy of Cruzo Care car services" />
                 </Helmet>
                 <div className="prose max-w-4xl mx-auto">
                     <div className="mb-10 text-center">
-                        <h1 className="text-3xl md:text-4xl font-bold mb-2 text-primary">CruzoCare Privacy Policy</h1>
+                        <h1 className="text-3xl md:text-4xl font-bold mb-2 text-primary">Cruzo Care Privacy Policy</h1>
                         <div className="mt-4">
                             <p className="text-sm">Effective Date: January 1, 2025</p>
                             <p className="text-sm text-muted-foreground">(Governed by Laws of the Republic of India)</p>
